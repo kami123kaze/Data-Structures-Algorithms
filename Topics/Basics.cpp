@@ -1,7 +1,7 @@
 //! The iostream library is an object-oriented library that provides input and output functionality using streams.
 #include <iostream>
 
-//? In int main, the int signifies that the function returns an integer to the operating system upon completion,In int main, the int signifies that the function returns an integer to the operating system upon completion.
+//? In int main, the int signifies that the function returns an integer to the operating system upon completion.
 int main(){
 //* DATA TYPES
 
