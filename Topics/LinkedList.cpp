@@ -70,4 +70,5 @@ int main(){
   InsertAtTail(tail,20);
   InsertAtPosition(head,tail,4,1000);
   Traversal(head,tail);    
+  
 }
