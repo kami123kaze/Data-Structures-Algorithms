@@ -10,9 +10,18 @@ class node{
     this -> data = data;
     this -> next = NULL;
    }
+   //destructor
+   ~node(){
+     int value = this -> data;
+        if(this -> next != NULL){
+            delete next;
+            this -> next = NULL;
+        }
+    std::cout << std::endl << "meomory is free for node with data " << value << std::endl;
+   }
 };
 
-// Function for traversal
+
 void Traversal(node* &head,node* &tail){
   using namespace std;
   node* temp = head;
@@ -62,6 +71,35 @@ void InsertAtPosition(node* &head,node* &tail,int posi,int d){
   }
 }
 
+void DeleteNode(node* &head,node* &tail,int posi){
+if(posi == 1){
+  node*temp = head;
+  head = head -> next;
+  temp -> next = NULL;
+  delete temp;
+  return;
+}
+int cnt =0;
+node* prev =NULL;
+node* curr = head;
+while(cnt<posi){
+prev = curr;
+curr = curr -> next;
+cnt++;
+}
+if(curr-> next = NULL){
+node* temp = tail;
+tail = prev;
+temp -> next = NULL;
+delete temp;
+return;
+}
+ else{
+  prev -> next = curr -> next;
+  curr -> next = NULL;
+  delete curr;
+ }
+}
 int main(){
   node* node1 = new node(10);
   node* head = node1;
@@ -70,4 +108,6 @@ int main(){
   InsertAtTail(tail,20);
   InsertAtPosition(head,tail,4,1000);
   Traversal(head,tail);    
+  DeleteNode(head,tail,3);
+  Traversal(head,tail);
 }
