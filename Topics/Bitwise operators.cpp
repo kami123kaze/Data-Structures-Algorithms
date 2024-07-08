@@ -1,5 +1,7 @@
 #include<iostream>
 
+//? Character representing an action on data that works on bit level
+
 void BitwiseOperators(int a,int b){
   std:: cout << "let a =4 and b = 6" << std::endl;
   std:: cout << "a&b :- " <<(a&b) <<std::endl;
